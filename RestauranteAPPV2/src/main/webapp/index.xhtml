@@ -6,28 +6,29 @@
 <h:head>
     <title>Proyecto Integración Continua</title>
 </h:head>
-<p:growl id="growl" sticky="true" showDetail="true"></p:growl>
-<h:form>
-    <h3>Login Form</h3>
-    <h:outputText value="Username" />
-    <h:inputText id="username" value="#{loginController.usuario}"></h:inputText>
-    <h:message for="username"></h:message>
-    <br></br><br></br>
+<h:body>
+    <p:growl id="growl" sticky="true" showDetail="true"></p:growl>
+    <h:form>
+        <h3>Login Form</h3>
+        <h:outputText value="Username" />
+        <h:inputText id="username" value="#{loginController.usuario}"></h:inputText>
+        <h:message for="username"></h:message>
+        <br></br><br></br>
 
-    <h:outputText value="Password" />
-    <h:inputSecret id="password" value="#{loginController.pass}"></h:inputSecret>
-    <h:message for="password"></h:message>
-    <br></br><br></br>
+        <h:outputText value="Password" />
+        <h:inputSecret id="password" value="#{loginController.pass}"></h:inputSecret>
+        <h:message for="password"></h:message>
+        <br></br><br></br>
 
-    <p:commandButton value="Login" onclick="PF('integrantesGrupo').show();" update="dgIntegrantes" />
-    <p:dialog header="Integrantes del grupo" id="dgIntegrantes" widgetVar="integrantesGrupo" modal="true"
-        responsive="true">
-        <h:outputText value="Yakelin Realpe" />
-        <h:outputText value="Jhon Gonzalez" />
-        <h:outputText value="Jonathan Henao" />
-        <h:outputText value="Andres Quintana" />
-    </p:dialog>
-</h:form>
-
+        <p:commandButton value="Login" onclick="PF('integrantesGrupo').show();" update="dgIntegrantes" />
+        <p:dialog header="Integrantes del grupo" id="dgIntegrantes" widgetVar="integrantesGrupo" modal="true"
+            responsive="true">
+            <h:outputText value="Yakelin Realpe" />
+            <h:outputText value="Jhon Gonzalez" />
+            <h:outputText value="Jonathan Henao" />
+            <h:outputText value="Andres Quintana" />
+        </p:dialog>
+    </h:form>
+</h:body>
 
 </html>
