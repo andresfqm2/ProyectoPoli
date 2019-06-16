@@ -1,38 +1,33 @@
 <?xml version='1.0' encoding='UTF-8' ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:f="http://xmlns.jcp.org/jsf/core"
-      xmlns:p="http://primefaces.org/ui">
-    <h:head>
-        <title>Proyecto Integración Continua</title>
-    </h:head>
-    <p:growl id="growl" sticky="true" showDetail="true"></p:growl>
-    <h:form>
-        <h:panelGrid columns="2" style="position: absolute; top: 250px; left: 500px">
-            <f:facet name="header">Login Form</f:facet>
-            <h:outputText value=""></h:outputText>
-            <p:inputText value="#{loginController.usuario}"></p:inputText>
-            <h:outputText value=""></h:outputText>
-            <p:password value="#{loginController.pass}"></p:password>
-            <f:facet name="footer">
-                <p:commandButton value="Login" 
-                                 onclick="PF('integrantesGrupo').show();" 
-                                 update="dgIntegrantes"></p:commandButton>
-        </f:facet>
-    </h:panelGrid>
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://xmlns.jcp.org/jsf/html"
+    xmlns:f="http://xmlns.jcp.org/jsf/core" xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <title>Proyecto Integración Continua</title>
+</h:head>
+<p:growl id="growl" sticky="true" showDetail="true"></p:growl>
+<h:form>
+    <h3>Login Form</h3>
+    <h:outputText value="Username" />
+    <h:inputText id="username" value="#{loginController.usuario}"></h:inputText>
+    <h:message for="username"></h:message>
+    <br></br><br></br>
 
-    <p:dialog header="Integrantes del grupo" 
-              id="dgIntegrantes" 
-              widgetVar="integrantesGrupo" 
-              modal="true" 
-              responsive="true">
-        <h:outputText value="Yakelin Realpe"/>
-        <h:outputText value="Jhon Gonzalez"/>
-        <h:outputText value="Jonathan Henao"/>
-        <h:outputText value="Andres Quintana"/>
+    <h:outputText value="Password" />
+    <h:inputSecret id="password" value="#{loginController.pass}"></h:inputSecret>
+    <h:message for="password"></h:message>
+    <br></br><br></br>
+
+    <p:commandButton value="Login" onclick="PF('integrantesGrupo').show();" update="dgIntegrantes" />
+    <p:dialog header="Integrantes del grupo" id="dgIntegrantes" widgetVar="integrantesGrupo" modal="true"
+        responsive="true">
+        <h:outputText value="Yakelin Realpe" />
+        <h:outputText value="Jhon Gonzalez" />
+        <h:outputText value="Jonathan Henao" />
+        <h:outputText value="Andres Quintana" />
     </p:dialog>
-
 </h:form>
-</html>
 
+
+</html>
