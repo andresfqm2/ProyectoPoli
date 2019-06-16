@@ -28,6 +28,12 @@
             <version>6.0</version>
             <type>jar</type>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/com.sun.faces/jsf-api -->
+        <dependency>
+            <groupId>com.sun.faces</groupId>
+            <artifactId>jsf-api</artifactId>
+            <version>2.2.19</version>
+        </dependency>
 
     </dependencies>
 
