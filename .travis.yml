@@ -1,11 +1,7 @@
 language: java
 sudo: false
 script: mvn clean verify
-copy: /home/travis/build/andresfqm2/ProyectoPoli/target/RestauranteAPPV2-1.0-SNAPSHOT.war C:\home\wildfly-8.2.0.Final\standalone\deployments\RestauranteAPPV2-1.0-SNAPSHOT.war
 deploy:
-provider: pages
-skip-cleanup: true
-github-token: $GITHUB_TOKEN
-local_dir: build
-on:
-branch: master
+  provider: heroku
+  api_key: 498b392d-ba6b-4aa1-97a5-0a5ebdaf4f64
+  skip_cleanup: true
