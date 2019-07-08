@@ -2,9 +2,9 @@ language: java
 sudo: false
 script: mvn clean verify
 deploy:
-provider:pages
-skip-cleanup:true
-github-token:$GITHUB_TOKEN
-local_dir:build
+provider: pages
+skip-cleanup: true
+github-token: $GITHUB_TOKEN
+local_dir: build
 on:
-branch:master
+branch: master
