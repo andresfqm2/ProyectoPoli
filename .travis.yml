@@ -2,9 +2,6 @@ language: java
 sudo: false
 script: mvn clean verify
 deploy:
-provider: pages
-skip-cleanup: true
-github-token: $GITHUB_TOKEN
-local_dir: build
-on:
-branch: master
+provider: heroku
+api_key: 498b392d-ba6b-4aa1-97a5-0a5ebdaf4f64
+app: restaurantapp2
