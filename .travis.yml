@@ -1,5 +1,10 @@
 language: java
+sudo: false
+script: mvn build
 deploy:
-provider: heroku
-api_key: 498b392d-ba6b-4aa1-97a5-0a5ebdaf4f64
-app: restaurantapp2
+provider: pages
+skip-cleanup: true
+github-token: $GITHUB_TOKEN
+local_dir: build
+on:
+branch: master
